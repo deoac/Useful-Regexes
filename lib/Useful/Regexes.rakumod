@@ -2,7 +2,7 @@
 
 # A collection of useful Raku regexes.
 # © 2023 Shimon Bollinger. All rights reserved.
-# Last modified: Tue 12 Sep 2023 04:12:16 PM EDT
+# Last modified: Tue 12 Sep 2023 04:20:15 PM EDT
 # Version 0.0.1
 
 # begin-no-weave
@@ -28,6 +28,9 @@ my regex optional-chars is export(:MANDATORY) {    \N*?           }
 my token rest-of-line   is export(:MANDATORY) {    \N*   [\n | $] }
 my token ws-till-EOL    is export(:MANDATORY) {    <hws> [\n | $] }
 my token blank-line     is export(:MANDATORY) { ^^ <ws-till-EOL>  }
+
+# The backslash is included as an opening-quote because it's useful for
+# detecting a comment symbol (#) when it's not being used as a comment.
 my token opening-quote  is export(:MANDATORY) { <:Open_Punctuation    +
                                                  :Initial_Punctuation +
                                                  [\' \" \\]
@@ -36,7 +39,7 @@ my token opening-quote  is export(:MANDATORY) { <:Open_Punctuation    +
 
 my token closing-quote  is export(:MANDATORY) { <:Close_Punctuation +
                                                  :Final_Punctuation +
-                                                 [\' \" \\]
+                                                 [\' \"]
                                                 >
 } # end of my token closing-quote
 
