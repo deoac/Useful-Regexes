@@ -2,7 +2,7 @@
 
 # A collection of useful Raku regexes.
 # © 2023 Shimon Bollinger. All rights reserved.
-# Last modified: Tue 12 Sep 2023 03:59:55 PM EDT
+# Last modified: Tue 12 Sep 2023 04:05:37 PM EDT
 # Version 0.0.1
 
 # begin-no-weave
@@ -39,7 +39,7 @@ my token closing-quote  is export(:MANDATORY) { <:Close_Punctuation +
 
 =begin pod
 
-=head1 NAME
+=head1 TITLE
 
 Useful::Regexes - A collection of useful Raku regexes.
 
@@ -79,7 +79,7 @@ Patches are welcome.
 
 =head1 AUTHOR
 
-<Shimon Bollinger>  (<deoac.bollinger@gmail.com>)
+Shimon Bollinger  (<deoac.bollinger@gmail.com>)
 
 
 =head1 LICENCE AND COPYRIGHT
