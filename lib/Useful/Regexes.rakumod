@@ -2,7 +2,7 @@
 
 # A collection of useful Raku regexes.
 # © 2023 Shimon Bollinger. All rights reserved.
-# Last modified: Tue 12 Sep 2023 03:15:43 PM EDT
+# Last modified: Tue 12 Sep 2023 03:59:55 PM EDT
 # Version 0.0.1
 
 # begin-no-weave
@@ -14,23 +14,23 @@ use Data::Dump::Tree;
 
 unit role Useful::Regexes;
 
-my token hws            {    <!ww>\h*       } # Horizontal White Space
-my token leading-ws     { ^^ <hws>          } # Whitespace at start of line
-my regex optional-chars {    \N*?           }
-my token rest-of-line   {    \N*   [\n | $] }
-my token ws-till-EOL    {    <hws> [\n | $] }
-my token blank-line     { ^^ <ws-till-EOL>  }
-my token opening-quote  { <:Ps +      # Unicode Open_Punctuation
-                           :Pi +      # Unicode Initial_Punctuation
-                           [\' " \\]
-                          >
-                        } # end of my token opening-quote
+my token hws            is export(:MANDATORY) {    <!ww>\h*       } #| Horizontal White Space
+my token leading-ws     is export(:MANDATORY) { ^^ <hws>          } # Whitespace at start of line
+my regex optional-chars is export(:MANDATORY) {    \N*?           }
+my token rest-of-line   is export(:MANDATORY) {    \N*   [\n | $] }
+my token ws-till-EOL    is export(:MANDATORY) {    <hws> [\n | $] }
+my token blank-line     is export(:MANDATORY) { ^^ <ws-till-EOL>  }
+my token opening-quote  is export(:MANDATORY) { <:Open_Punctuation    +
+                                                 :Initial_Punctuation +
+                                                 [\' \" \\]
+                                                >
+} # end of my token opening-quote
 
-my token closing-quote  { <:Pe +      # Unicode Close_Punctuation
-                           :Pf +      # Unicode Final_Punctuation
-                           [\' " \\]
-                          >
-                        } # end of my token closing-quote
+my token closing-quote  is export(:MANDATORY) { <:Close_Punctuation +
+                                                 :Final_Punctuation +
+                                                 [\' \" \\]
+                                                >
+} # end of my token closing-quote
 
 ##############################################################################
 ##    Example 7.1 (Recommended) from Chapter 7 of "Perl Best Practices"     ##
