@@ -2,7 +2,7 @@
 
 # A collection of useful Raku regexes.
 # © 2023 Shimon Bollinger. All rights reserved.
-# Last modified: Tue 12 Sep 2023 04:05:37 PM EDT
+# Last modified: Tue 12 Sep 2023 04:12:16 PM EDT
 # Version 0.0.1
 
 # begin-no-weave
@@ -11,6 +11,14 @@ use v6.*;
 use PrettyDump;
 use Data::Dump::Tree;
 #end-no-weave
+
+=begin pod
+=TITLE Useful::Regexes - A collection of useful Raku regexes.
+
+
+=head1 All the regexes
+
+=end pod
 
 unit role Useful::Regexes;
 
@@ -38,11 +46,6 @@ my token closing-quote  is export(:MANDATORY) { <:Close_Punctuation +
 ##############################################################################
 
 =begin pod
-
-=head1 TITLE
-
-Useful::Regexes - A collection of useful Raku regexes.
-
 
 =head1 VERSION
 
