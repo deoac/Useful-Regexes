@@ -23,18 +23,19 @@
     8| my token rest-of-line   is export(:MANDATORY) {    \N*   [\n | $] }
     9| my token ws-till-EOL    is export(:MANDATORY) {    <hws> [\n | $] }
    10| my token blank-line     is export(:MANDATORY) { ^^ <ws-till-EOL>  }
-   11| my token opening-quote  is export(:MANDATORY) { <:Open_Punctuation    +
-   12|                                                  :Initial_Punctuation +
-   13|                                                  [\' \" \\]
-   14|                                                 >
-   15| }
-   16| 
-   17| my token closing-quote  is export(:MANDATORY) { <:Close_Punctuation +
-   18|                                                  :Final_Punctuation +
-   19|                                                  [\' \" \\]
-   20|                                                 >
-   21| }
-   22| 
+   11| 
+   12| my token opening-quote  is export(:MANDATORY) { <:Open_Punctuation    +
+   13|                                                  :Initial_Punctuation +
+   14|                                                  [\' \" \\]
+   15|                                                 >
+   16| }
+   17| 
+   18| my token closing-quote  is export(:MANDATORY) { <:Close_Punctuation +
+   19|                                                  :Final_Punctuation +
+   20|                                                  [\' \"]
+   21|                                                 >
+   22| }
+   23| 
 
 ```
 
@@ -78,3 +79,12 @@ Copyright (c)2022 Shimon Bollinger. All rights reserved.
 This module is free software; you can redistribute it and/or modify it under the same terms as Raku itself. See [The Artistic License 2.0](https://opensource.org/licenses/Artistic-2.0).
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+
+
+
+
+
+----
+Rendered from  at 2023-09-12T20:21:02Z
