@@ -1,0 +1,29 @@
+=begin pod
+
+=head1 NAME
+
+B<Useful::Regexes> - Some useful regexes
+
+=head1 SYNOPSIS
+
+=begin code :lang<raku>
+
+use Useful::Regexes;
+
+=end code
+
+=head1 DESCRIPTION
+
+B<Useful::Regexes> is ...
+
+=head1 AUTHOR
+
+Shimon Bollinger <deoac.bollinger@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+© 2023 Shimon Bollinger
+
+This library is free software; you may redistribute it or modify it under the Artistic License 2.0.
+
+=end pod

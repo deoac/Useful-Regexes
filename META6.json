@@ -1,0 +1,25 @@
+{
+  "auth": "zef:deoac",
+  "authors": [
+    "Shimon Bollinger"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Some useful regexes",
+  "license": "Artistic-2.0",
+  "name": "Useful::Regexes",
+  "perl": "6.d",
+  "provides": {
+    "Useful::Regexes": "lib/Useful/Regexes.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "",
+  "tags": [
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

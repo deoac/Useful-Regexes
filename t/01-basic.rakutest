@@ -1,0 +1,6 @@
+use Test;
+use Useful::Regexes;
+
+pass "replace me";
+
+done-testing;
