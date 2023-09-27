@@ -2,7 +2,7 @@
 
 # A collection of useful Raku regexes.
 # © 2023 Shimon Bollinger. All rights reserved.
-# Last modified: Tue 12 Sep 2023 04:20:15 PM EDT
+# Last modified: Wed 27 Sep 2023 02:29:53 PM EDT
 # Version 0.0.1
 
 # begin-no-weave
@@ -23,8 +23,9 @@ use Data::Dump::Tree;
 unit role Useful::Regexes;
 
 my token hws            is export(:MANDATORY) {    <!ww>\h*       } #| Horizontal White Space
-my token leading-ws     is export(:MANDATORY) { ^^ <hws>          } # Whitespace at start of line
+my token leading-ws     is export(:MANDATORY) { ^^ <hws>          } #| Whitespace at start of line
 my regex optional-chars is export(:MANDATORY) {    \N*?           }
+my regex required-chars is export(:MANDATORY) {    \N+?           }
 my token rest-of-line   is export(:MANDATORY) {    \N*   [\n | $] }
 my token ws-till-EOL    is export(:MANDATORY) {    <hws> [\n | $] }
 my token blank-line     is export(:MANDATORY) { ^^ <ws-till-EOL>  }
